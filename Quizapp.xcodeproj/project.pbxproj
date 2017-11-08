@@ -13,6 +13,10 @@
 		FAF1220F1FB31FA400E47CF8 /* QuestionViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1220E1FB31FA400E47CF8 /* QuestionViewControllerTest.swift */; };
 		FAF122111FB3202900E47CF8 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF122101FB3202900E47CF8 /* QuestionViewController.swift */; };
 		FAF122131FB320B300E47CF8 /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF122121FB320B300E47CF8 /* QuestionViewController.xib */; };
+		FAF122151FB3657200E47CF8 /* ResultsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF122141FB3657200E47CF8 /* ResultsViewControllerTest.swift */; };
+		FAF122171FB3661500E47CF8 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF122161FB3661500E47CF8 /* ResultsViewController.swift */; };
+		FAF122191FB3666800E47CF8 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF122181FB3666800E47CF8 /* ResultsViewController.xib */; };
+		FAF1221D1FB36F0200E47CF8 /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1221C1FB36F0200E47CF8 /* TableViewHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		FAF1220E1FB31FA400E47CF8 /* QuestionViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerTest.swift; sourceTree = "<group>"; };
 		FAF122101FB3202900E47CF8 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		FAF122121FB320B300E47CF8 /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
+		FAF122141FB3657200E47CF8 /* ResultsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTest.swift; sourceTree = "<group>"; };
+		FAF122161FB3661500E47CF8 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		FAF122181FB3666800E47CF8 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
+		FAF1221C1FB36F0200E47CF8 /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,8 @@
 				FAF121FA1FB31F6300E47CF8 /* Info.plist */,
 				FAF122101FB3202900E47CF8 /* QuestionViewController.swift */,
 				FAF122121FB320B300E47CF8 /* QuestionViewController.xib */,
+				FAF122161FB3661500E47CF8 /* ResultsViewController.swift */,
+				FAF122181FB3666800E47CF8 /* ResultsViewController.xib */,
 			);
 			path = Quizapp;
 			sourceTree = "<group>";
@@ -90,8 +100,10 @@
 		FAF122021FB31F6400E47CF8 /* QuizappTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAF1221C1FB36F0200E47CF8 /* TableViewHelpers.swift */,
 				FAF1220E1FB31FA400E47CF8 /* QuestionViewControllerTest.swift */,
 				FAF122051FB31F6400E47CF8 /* Info.plist */,
+				FAF122141FB3657200E47CF8 /* ResultsViewControllerTest.swift */,
 			);
 			path = QuizappTests;
 			sourceTree = "<group>";
@@ -182,6 +194,7 @@
 				FAF121F91FB31F6300E47CF8 /* LaunchScreen.storyboard in Resources */,
 				FAF121F61FB31F6300E47CF8 /* Assets.xcassets in Resources */,
 				FAF122131FB320B300E47CF8 /* QuestionViewController.xib in Resources */,
+				FAF122191FB3666800E47CF8 /* ResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +214,7 @@
 			files = (
 				FAF122111FB3202900E47CF8 /* QuestionViewController.swift in Sources */,
 				FAF121EF1FB31F6300E47CF8 /* AppDelegate.swift in Sources */,
+				FAF122171FB3661500E47CF8 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF1220F1FB31FA400E47CF8 /* QuestionViewControllerTest.swift in Sources */,
+				FAF1221D1FB36F0200E47CF8 /* TableViewHelpers.swift in Sources */,
+				FAF122151FB3657200E47CF8 /* ResultsViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
