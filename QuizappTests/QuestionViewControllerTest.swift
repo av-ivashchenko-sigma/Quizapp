@@ -4,39 +4,102 @@ import XCTest
 class QuestionViewControllerTest: XCTestCase {
   
   func test_viewDidLoad_rendersQuestionHeaderText() {
-    let sut = QuestionViewController(question: "Q1", options: [])
-    
-    _ = sut.view
-    
-    XCTAssertEqual(sut.headerLabel.text, "Q1")
+    XCTAssertEqual(makeSUT(question: "Q1").headerLabel.text, "Q1")
   }
   
-  func test_viewDidLoad_withNoOptions_rendersNoOptions() {
-    let sut = QuestionViewController(question: "Q1", options: [])
+  func test_viewDidLoad_withOneOption_rendersOptions() {
+    XCTAssertEqual(makeSUT().tableView.numberOfRows(inSection: 0), 0)
+    XCTAssertEqual(makeSUT(options: ["A1"]).tableView.numberOfRows(inSection: 0), 1)
+    XCTAssertEqual(makeSUT(options: ["A1", "A2"]).tableView.numberOfRows(inSection: 0), 2)
+  }
 
-    _ = sut.view
-
-    XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
+  func test_viewDidLoad_withOptions_rendersOptionText() {
+    XCTAssertEqual(makeSUT(options: ["A1", "A2"]).tableView.title(at: 0), "A1")
+    XCTAssertEqual(makeSUT(options: ["A1", "A2"]).tableView.title(at: 1), "A2")
   }
   
-  func test_viewDidLoad_withOneOption_rendersOneOption() {
-    let sut = QuestionViewController(question: "Q1", options: ["A1"])
+  func test_optionSelected_withSingleSelection_notifiesDelegateWithLastSelection() {
+    var receivedAnswer = [String]()
+    let sut = makeSUT(options: ["A1", "A2"]) { receivedAnswer = $0 }
     
-    _ = sut.view
+    sut.tableView.selectRowAt(index: 0)
+    XCTAssertEqual(receivedAnswer, ["A1"])
     
-    XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
+    sut.tableView.selectRowAt(index: 1)
+    XCTAssertEqual(receivedAnswer, ["A2"])
   }
-
-  func test_viewDidLoad_withOneOption_rendersOneOptionText() {
-    let sut = QuestionViewController(question: "Q1", options: ["A1"])
+  
+  func test_optionDeselected_withSingleSelection_doesNotNotifyDelegateWithEmptySelection() {
+    var callbackCount = 0
+    let sut = makeSUT(options: ["A1", "A2"]) { _ in callbackCount += 1 }
     
-    _ = sut.view
+    sut.tableView.selectRowAt(index: 0)
+    XCTAssertEqual(callbackCount, 1)
     
-    let indexPath = IndexPath(row: 0, section: 0)
-    let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: indexPath)
-    
-    XCTAssertEqual(cell?.textLabel?.text, "A1")
+    sut.tableView.deselectRowAt(index: 0)
+    XCTAssertEqual(callbackCount, 1)
   }
+  
+  
+  func test_optionSelected_withMultipleSelectionEnabled_notifiesDelegateSelection() {
+    var receivedAnswer = [String]()
+    let sut = makeSUT(options: ["A1", "A2"]) { receivedAnswer = $0 }
+    sut.tableView.allowsMultipleSelection = true
+    
+    sut.tableView.selectRowAt(index: 0)
+    XCTAssertEqual(receivedAnswer, ["A1"])
+    
+    sut.tableView.selectRowAt(index: 1)
+    XCTAssertEqual(receivedAnswer, ["A1", "A2"])
+  }
+  
+  func test_optionDeselected_withMultipleSelectionEnabled_notifiesDelegate() {
+    var receivedAnswer = [String]()
+    let sut = makeSUT(options: ["A1", "A2"]) { receivedAnswer = $0 }
+    sut.tableView.allowsMultipleSelection = true
+    
+    sut.tableView.selectRowAt(index: 0)
+    XCTAssertEqual(receivedAnswer, ["A1"])
+    
+    sut.tableView.deselectRowAt(index: 0)
+    XCTAssertEqual(receivedAnswer, [])
+  }
+  
+  // MARK: Helpers
 
+  func makeSUT(question: String = "",
+               options: [String] = [],
+               selection: @escaping ([String]) -> Void = { _ in }) -> QuestionViewController {
+    let sut = QuestionViewController(question: question,
+                                     options: options,
+                                     selection: selection)
+    _ = sut.view
+    return sut
+  }
+  
+}
+
+private extension UITableView {
+  
+  func cell(at index: Int) -> UITableViewCell? {
+    return dataSource?.tableView(self, cellForRowAt: IndexPath(row: index, section: 0))
+  }
+  
+  func title(at row: Int) -> String? {
+    return cell(at: row)?.textLabel?.text
+  }
+  
+  func selectRowAt(index: Int) {
+    selectRow(at: IndexPath(row: index, section: 0),
+              animated: false,
+              scrollPosition: .bottom)
+    delegate?.tableView?(self, didSelectRowAt: IndexPath(row: index, section: 0))
+  }
+  
+  func deselectRowAt(index: Int) {
+    deselectRow(at: IndexPath(row: index, section: 0),
+              animated: false)
+    delegate?.tableView?(self, didDeselectRowAt: IndexPath(row: index, section: 0))
+  }
   
 }
