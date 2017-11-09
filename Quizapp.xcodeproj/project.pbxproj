@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1B1C771FB49ACD0068AB2D /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B1C761FB49ACD0068AB2D /* UITableViewExtensions.swift */; };
+		FA1B1C7A1FB49B3C0068AB2D /* CorrectAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B1C791FB49B3C0068AB2D /* CorrectAnswerCell.swift */; };
+		FA1B1C7C1FB49B640068AB2D /* WrongAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B1C7B1FB49B640068AB2D /* WrongAnswerCell.swift */; };
+		FA1B1C7E1FB49B7D0068AB2D /* PresentationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B1C7D1FB49B7D0068AB2D /* PresentationLayer.swift */; };
+		FAEBB6EC1FB4893100F03FBA /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEBB6EB1FB4893100F03FBA /* CorrectAnswerCell.xib */; };
+		FAEBB6FF1FB490B600F03FBA /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEBB6FE1FB490B600F03FBA /* WrongAnswerCell.xib */; };
 		FAF121EF1FB31F6300E47CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF121EE1FB31F6300E47CF8 /* AppDelegate.swift */; };
 		FAF121F61FB31F6300E47CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF121F51FB31F6300E47CF8 /* Assets.xcassets */; };
 		FAF121F91FB31F6300E47CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF121F71FB31F6300E47CF8 /* LaunchScreen.storyboard */; };
@@ -30,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA1B1C761FB49ACD0068AB2D /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		FA1B1C791FB49B3C0068AB2D /* CorrectAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerCell.swift; sourceTree = "<group>"; };
+		FA1B1C7B1FB49B640068AB2D /* WrongAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerCell.swift; sourceTree = "<group>"; };
+		FA1B1C7D1FB49B7D0068AB2D /* PresentationLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationLayer.swift; sourceTree = "<group>"; };
+		FAEBB6EB1FB4893100F03FBA /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
+		FAEBB6FE1FB490B600F03FBA /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
 		FAF121EB1FB31F6300E47CF8 /* Quizapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF121EE1FB31F6300E47CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF121F51FB31F6300E47CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +76,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA1B1C781FB49AD20068AB2D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA1B1C761FB49ACD0068AB2D /* UITableViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAEBB6ED1FB4893D00F03FBA /* Question View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAF122101FB3202900E47CF8 /* QuestionViewController.swift */,
+				FAF122121FB320B300E47CF8 /* QuestionViewController.xib */,
+			);
+			path = "Question View Controller";
+			sourceTree = "<group>";
+		};
+		FAEBB6EE1FB4894500F03FBA /* Results View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAF122161FB3661500E47CF8 /* ResultsViewController.swift */,
+				FAF122181FB3666800E47CF8 /* ResultsViewController.xib */,
+			);
+			path = "Results View Controller";
+			sourceTree = "<group>";
+		};
+		FAEBB6F31FB48A3900F03FBA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				FAF121EE1FB31F6300E47CF8 /* AppDelegate.swift */,
+				FAF121F51FB31F6300E47CF8 /* Assets.xcassets */,
+				FAF121F71FB31F6300E47CF8 /* LaunchScreen.storyboard */,
+				FAF121FA1FB31F6300E47CF8 /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		FAEBB6F41FB48A6200F03FBA /* Correct Answer Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA1B1C791FB49B3C0068AB2D /* CorrectAnswerCell.swift */,
+				FAEBB6EB1FB4893100F03FBA /* CorrectAnswerCell.xib */,
+			);
+			path = "Correct Answer Cell";
+			sourceTree = "<group>";
+		};
+		FAEBB6FB1FB4909300F03FBA /* Wrong Answer Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBB6FE1FB490B600F03FBA /* WrongAnswerCell.xib */,
+				FA1B1C7B1FB49B640068AB2D /* WrongAnswerCell.swift */,
+			);
+			path = "Wrong Answer Cell";
+			sourceTree = "<group>";
+		};
 		FAF121E21FB31F6300E47CF8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,14 +152,13 @@
 		FAF121ED1FB31F6300E47CF8 /* Quizapp */ = {
 			isa = PBXGroup;
 			children = (
-				FAF121EE1FB31F6300E47CF8 /* AppDelegate.swift */,
-				FAF121F51FB31F6300E47CF8 /* Assets.xcassets */,
-				FAF121F71FB31F6300E47CF8 /* LaunchScreen.storyboard */,
-				FAF121FA1FB31F6300E47CF8 /* Info.plist */,
-				FAF122101FB3202900E47CF8 /* QuestionViewController.swift */,
-				FAF122121FB320B300E47CF8 /* QuestionViewController.xib */,
-				FAF122161FB3661500E47CF8 /* ResultsViewController.swift */,
-				FAF122181FB3666800E47CF8 /* ResultsViewController.xib */,
+				FA1B1C7D1FB49B7D0068AB2D /* PresentationLayer.swift */,
+				FAEBB6FB1FB4909300F03FBA /* Wrong Answer Cell */,
+				FAEBB6ED1FB4893D00F03FBA /* Question View Controller */,
+				FAEBB6EE1FB4894500F03FBA /* Results View Controller */,
+				FAEBB6F41FB48A6200F03FBA /* Correct Answer Cell */,
+				FAEBB6F31FB48A3900F03FBA /* Other */,
+				FA1B1C781FB49AD20068AB2D /* Extensions */,
 			);
 			path = Quizapp;
 			sourceTree = "<group>";
@@ -102,8 +168,8 @@
 			children = (
 				FAF1221C1FB36F0200E47CF8 /* TableViewHelpers.swift */,
 				FAF1220E1FB31FA400E47CF8 /* QuestionViewControllerTest.swift */,
-				FAF122051FB31F6400E47CF8 /* Info.plist */,
 				FAF122141FB3657200E47CF8 /* ResultsViewControllerTest.swift */,
+				FAF122051FB31F6400E47CF8 /* Info.plist */,
 			);
 			path = QuizappTests;
 			sourceTree = "<group>";
@@ -192,8 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF121F91FB31F6300E47CF8 /* LaunchScreen.storyboard in Resources */,
+				FAEBB6FF1FB490B600F03FBA /* WrongAnswerCell.xib in Resources */,
 				FAF121F61FB31F6300E47CF8 /* Assets.xcassets in Resources */,
 				FAF122131FB320B300E47CF8 /* QuestionViewController.xib in Resources */,
+				FAEBB6EC1FB4893100F03FBA /* CorrectAnswerCell.xib in Resources */,
 				FAF122191FB3666800E47CF8 /* ResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,9 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1B1C7E1FB49B7D0068AB2D /* PresentationLayer.swift in Sources */,
 				FAF122111FB3202900E47CF8 /* QuestionViewController.swift in Sources */,
 				FAF121EF1FB31F6300E47CF8 /* AppDelegate.swift in Sources */,
+				FA1B1C7A1FB49B3C0068AB2D /* CorrectAnswerCell.swift in Sources */,
+				FA1B1C7C1FB49B640068AB2D /* WrongAnswerCell.swift in Sources */,
 				FAF122171FB3661500E47CF8 /* ResultsViewController.swift in Sources */,
+				FA1B1C771FB49ACD0068AB2D /* UITableViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VGC6AR5XL;
-				INFOPLIST_FILE = Quizapp/Info.plist;
+				INFOPLIST_FILE = Quizapp/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sigmasoftware.Quizapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,7 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VGC6AR5XL;
-				INFOPLIST_FILE = Quizapp/Info.plist;
+				INFOPLIST_FILE = Quizapp/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sigmasoftware.Quizapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
