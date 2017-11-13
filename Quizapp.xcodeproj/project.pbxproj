@@ -11,6 +11,9 @@
 		FA1B1C7A1FB49B3C0068AB2D /* CorrectAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B1C791FB49B3C0068AB2D /* CorrectAnswerCell.swift */; };
 		FA1B1C7C1FB49B640068AB2D /* WrongAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B1C7B1FB49B640068AB2D /* WrongAnswerCell.swift */; };
 		FA1B1C7E1FB49B7D0068AB2D /* PresentationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B1C7D1FB49B7D0068AB2D /* PresentationLayer.swift */; };
+		FA3CA4871FB9D97A00398FA5 /* ResultsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CA4861FB9D97A00398FA5 /* ResultsPresenterTest.swift */; };
+		FA3CA4891FB9DC1600398FA5 /* ResultsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CA4881FB9DC1600398FA5 /* ResultsHelpers.swift */; };
+		FA3CA48B1FB9DC9200398FA5 /* ResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CA48A1FB9DC9200398FA5 /* ResultsPresenter.swift */; };
 		FA6F07AD1FB99F94002F1540 /* QuestionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F07AC1FB99F94002F1540 /* QuestionTest.swift */; };
 		FA6F07AF1FB9A369002F1540 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F07AE1FB9A369002F1540 /* Question.swift */; };
 		FA6F07B11FB9BE8E002F1540 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F07B01FB9BE8E002F1540 /* ViewControllerFactory.swift */; };
@@ -63,6 +66,9 @@
 		FA1B1C791FB49B3C0068AB2D /* CorrectAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerCell.swift; sourceTree = "<group>"; };
 		FA1B1C7B1FB49B640068AB2D /* WrongAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerCell.swift; sourceTree = "<group>"; };
 		FA1B1C7D1FB49B7D0068AB2D /* PresentationLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationLayer.swift; sourceTree = "<group>"; };
+		FA3CA4861FB9D97A00398FA5 /* ResultsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenterTest.swift; sourceTree = "<group>"; };
+		FA3CA4881FB9DC1600398FA5 /* ResultsHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsHelpers.swift; sourceTree = "<group>"; };
+		FA3CA48A1FB9DC9200398FA5 /* ResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenter.swift; sourceTree = "<group>"; };
 		FA6F07AC1FB99F94002F1540 /* QuestionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTest.swift; sourceTree = "<group>"; };
 		FA6F07AE1FB9A369002F1540 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FA6F07B01FB9BE8E002F1540 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 				FA6F07AE1FB9A369002F1540 /* Question.swift */,
 				FA6F07B01FB9BE8E002F1540 /* ViewControllerFactory.swift */,
 				FA6F07B41FB9BFF5002F1540 /* iOSViewControllerFactory.swift */,
+				FA3CA48A1FB9DC9200398FA5 /* ResultsPresenter.swift */,
 			);
 			path = Quizapp;
 			sourceTree = "<group>";
@@ -220,6 +227,8 @@
 				FA834C901FB6045B0072F142 /* NavigationControllerRouterTest.swift */,
 				FA6F07AC1FB99F94002F1540 /* QuestionTest.swift */,
 				FA6F07B21FB9BF0E002F1540 /* iOSViewControllerFactoryTest.swift */,
+				FA3CA4861FB9D97A00398FA5 /* ResultsPresenterTest.swift */,
+				FA3CA4881FB9DC1600398FA5 /* ResultsHelpers.swift */,
 			);
 			path = QuizappTests;
 			sourceTree = "<group>";
@@ -334,6 +343,7 @@
 				FA834C931FB605170072F142 /* NavigationControllerRouter.swift in Sources */,
 				FA6F07B11FB9BE8E002F1540 /* ViewControllerFactory.swift in Sources */,
 				FA1B1C7E1FB49B7D0068AB2D /* PresentationLayer.swift in Sources */,
+				FA3CA48B1FB9DC9200398FA5 /* ResultsPresenter.swift in Sources */,
 				FA6F07B51FB9BFF5002F1540 /* iOSViewControllerFactory.swift in Sources */,
 				FAF122111FB3202900E47CF8 /* QuestionViewController.swift in Sources */,
 				FA6F07AF1FB9A369002F1540 /* Question.swift in Sources */,
@@ -350,8 +360,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6F07AD1FB99F94002F1540 /* QuestionTest.swift in Sources */,
+				FA3CA4871FB9D97A00398FA5 /* ResultsPresenterTest.swift in Sources */,
 				FA6F07B31FB9BF0E002F1540 /* iOSViewControllerFactoryTest.swift in Sources */,
 				FA834C911FB6045B0072F142 /* NavigationControllerRouterTest.swift in Sources */,
+				FA3CA4891FB9DC1600398FA5 /* ResultsHelpers.swift in Sources */,
 				FAF1220F1FB31FA400E47CF8 /* QuestionViewControllerTest.swift in Sources */,
 				FAF1221D1FB36F0200E47CF8 /* TableViewHelpers.swift in Sources */,
 				FAF122151FB3657200E47CF8 /* ResultsViewControllerTest.swift in Sources */,
