@@ -29,7 +29,7 @@ class QuestionViewControllerTest: XCTestCase {
     }
     
     func test_optionSelected_withSingleSelection_notifiesDelegateWithLastSelection() {
-        var receivedAnswer = [String]()
+        var receivedAnswer = Set<String>()
         let sut = makeSUT(options: ["A1", "A2"]) { receivedAnswer = $0 }
         
         sut.tableView.selectRowAt(index: 0)
@@ -52,7 +52,7 @@ class QuestionViewControllerTest: XCTestCase {
     
     
     func test_optionSelected_withMultipleSelectionEnabled_notifiesDelegateSelection() {
-        var receivedAnswer = [String]()
+        var receivedAnswer = Set<String>()
         let sut = makeSUT(options: ["A1", "A2"], allowsMultipleSelection: true) { receivedAnswer = $0 }
         
         sut.tableView.selectRowAt(index: 0)
@@ -63,7 +63,7 @@ class QuestionViewControllerTest: XCTestCase {
     }
     
     func test_optionDeselected_withMultipleSelectionEnabled_notifiesDelegate() {
-        var receivedAnswer = [String]()
+        var receivedAnswer = Set<String>()
         let sut = makeSUT(options: ["A1", "A2"], allowsMultipleSelection: true) { receivedAnswer = $0 }
         
         sut.tableView.selectRowAt(index: 0)
@@ -78,7 +78,7 @@ class QuestionViewControllerTest: XCTestCase {
     func makeSUT(question: String = "",
                  options: [String] = [],
                  allowsMultipleSelection: Bool = false,
-                 selection: @escaping ([String]) -> Void = { _ in }) -> QuestionViewController {
+                 selection: @escaping (Set<String>) -> Void = { _ in }) -> QuestionViewController {
         let questionType = Question.singleAnswer(question)
         let factory = iOSViewControllerFactory(questions: [], options: [questionType: options], correctAnswers: [:])
         let sut = factory.questionViewController(for: questionType, answerCallback: selection) as! QuestionViewController
