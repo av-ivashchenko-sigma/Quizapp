@@ -12,7 +12,18 @@ class NavigationControllerRouter: Router {
     }
     
     func routeTo(question: Question<String>, answerCallback: @escaping ([String]) -> Void) {
-        show(factory.questionViewController(for: question, answerCallback: answerCallback))
+        switch question {
+        case .singleAnswer:
+            show(factory.questionViewController(for: question, answerCallback: answerCallback))
+        case .multipleAnswer:
+            let button = UIBarButtonItem(title: "Submit", style: .done, target: nil, action: nil)
+            let buttonController = SubmitButtonController(button, answerCallback)
+            let viewController = factory.questionViewController(for: question, answerCallback: { selection in
+                buttonController.update(selection)
+            })
+            viewController.navigationItem.rightBarButtonItem = button
+            show(viewController)
+        }
     }
 
     func routeTo(result: Result<Question<String>, [String]>) {
@@ -22,5 +33,41 @@ class NavigationControllerRouter: Router {
     private func show(_ viewController: UIViewController) {
         navigationController.pushViewController(viewController, animated: true)
     }
-    
 }
+
+private class SubmitButtonController: NSObject {
+    private let button: UIBarButtonItem
+    private let callback: ([String]) -> Void
+    private var model: [String] = []
+    
+    init(_ button: UIBarButtonItem,_ callback: @escaping ([String]) -> Void) {
+        self.button = button
+        self.callback = callback
+        super.init()
+        self.setup()
+    }
+    
+    private func setup() {
+        button.target = self
+        button.action = #selector(fireCallback)
+        updateButtonState()
+    }
+    
+    @objc private func fireCallback() {
+        callback(model)
+    }
+    
+    func updateButtonState() {
+        button.isEnabled = model.count > 0
+    }
+    
+    func update(_ model: [String]) {
+        self.model = model
+        updateButtonState()
+    }
+}
+
+
+
+
+
