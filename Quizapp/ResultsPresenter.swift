@@ -7,6 +7,10 @@ struct ResultsPresenter {
     let options: [Question<String>: [String]]
     let correctAnswers: [Question<String>: Set<String>]
     
+    var title: String {
+        return "Result"
+    }
+    
     var summary: String {
         return "You got \(result.score)/\(result.answers.count) correct"
     }
