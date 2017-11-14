@@ -25,6 +25,8 @@
 		FA834C931FB605170072F142 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA834C921FB605170072F142 /* NavigationControllerRouter.swift */; };
 		FAEBB6EC1FB4893100F03FBA /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEBB6EB1FB4893100F03FBA /* CorrectAnswerCell.xib */; };
 		FAEBB6FF1FB490B600F03FBA /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEBB6FE1FB490B600F03FBA /* WrongAnswerCell.xib */; };
+		FAECB7B41FBB144700CFDE88 /* QuestionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECB7B31FBB144700CFDE88 /* QuestionPresenterTest.swift */; };
+		FAECB7B61FBB14F700CFDE88 /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECB7B51FBB14F700CFDE88 /* QuestionPresenter.swift */; };
 		FAF121EF1FB31F6300E47CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF121EE1FB31F6300E47CF8 /* AppDelegate.swift */; };
 		FAF121F61FB31F6300E47CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF121F51FB31F6300E47CF8 /* Assets.xcassets */; };
 		FAF121F91FB31F6300E47CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF121F71FB31F6300E47CF8 /* LaunchScreen.storyboard */; };
@@ -80,6 +82,8 @@
 		FA834C921FB605170072F142 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
 		FAEBB6EB1FB4893100F03FBA /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
 		FAEBB6FE1FB490B600F03FBA /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
+		FAECB7B31FBB144700CFDE88 /* QuestionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenterTest.swift; sourceTree = "<group>"; };
+		FAECB7B51FBB14F700CFDE88 /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
 		FAF121EB1FB31F6300E47CF8 /* Quizapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF121EE1FB31F6300E47CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF121F51FB31F6300E47CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				FA6F07B01FB9BE8E002F1540 /* ViewControllerFactory.swift */,
 				FA6F07B41FB9BFF5002F1540 /* iOSViewControllerFactory.swift */,
 				FA3CA48A1FB9DC9200398FA5 /* ResultsPresenter.swift */,
+				FAECB7B51FBB14F700CFDE88 /* QuestionPresenter.swift */,
 			);
 			path = Quizapp;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				FA6F07B21FB9BF0E002F1540 /* iOSViewControllerFactoryTest.swift */,
 				FA3CA4861FB9D97A00398FA5 /* ResultsPresenterTest.swift */,
 				FA3CA4881FB9DC1600398FA5 /* ResultsHelpers.swift */,
+				FAECB7B31FBB144700CFDE88 /* QuestionPresenterTest.swift */,
 			);
 			path = QuizappTests;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				FA6F07AF1FB9A369002F1540 /* Question.swift in Sources */,
 				FAF121EF1FB31F6300E47CF8 /* AppDelegate.swift in Sources */,
 				FA1B1C7A1FB49B3C0068AB2D /* CorrectAnswerCell.swift in Sources */,
+				FAECB7B61FBB14F700CFDE88 /* QuestionPresenter.swift in Sources */,
 				FA1B1C7C1FB49B640068AB2D /* WrongAnswerCell.swift in Sources */,
 				FAF122171FB3661500E47CF8 /* ResultsViewController.swift in Sources */,
 				FA1B1C771FB49ACD0068AB2D /* UITableViewExtensions.swift in Sources */,
@@ -363,6 +370,7 @@
 				FA3CA4871FB9D97A00398FA5 /* ResultsPresenterTest.swift in Sources */,
 				FA6F07B31FB9BF0E002F1540 /* iOSViewControllerFactoryTest.swift in Sources */,
 				FA834C911FB6045B0072F142 /* NavigationControllerRouterTest.swift in Sources */,
+				FAECB7B41FBB144700CFDE88 /* QuestionPresenterTest.swift in Sources */,
 				FA3CA4891FB9DC1600398FA5 /* ResultsHelpers.swift in Sources */,
 				FAF1220F1FB31FA400E47CF8 /* QuestionViewControllerTest.swift in Sources */,
 				FAF1221D1FB36F0200E47CF8 /* TableViewHelpers.swift in Sources */,
